@@ -1563,9 +1563,6 @@ export default class hyperliquid extends Exchange {
             'grouping': 'na',
             // 'brokerCode': 1, // cant
         };
-        if (vaultAddress === undefined) {
-            orderAction['brokerCode'] = 1;
-        }
         const signature = this.signL1Action (orderAction, nonce, vaultAddress);
         const request: Dict = {
             'action': orderAction,
